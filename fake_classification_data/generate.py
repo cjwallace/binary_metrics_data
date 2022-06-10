@@ -19,8 +19,8 @@ def generate():
     labels = y_test.tolist()
 
     results = [
-        {"prediction": prediction, "label": label}
-        for (prediction, label) in zip(probabilities, labels)
+        {"probability": probability, "label": label}
+        for (probability, label) in zip(probabilities, labels)
     ]
 
     with open("data/predictions.json", "w") as f:
