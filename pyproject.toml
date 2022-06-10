@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fake-classification-data"
+version = "0.1.0"
+description = ""
+authors = ["Chris Wallace <chris@bitcollider.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+scipy = "^1.8.1"
+scikit-learn = "^1.1.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.3.0"
+
+[tool.poetry.scripts]
+generate = "fake_classification_data:generate"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
