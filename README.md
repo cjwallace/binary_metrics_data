@@ -1,11 +1,27 @@
 # fake classification data
 
-Generating fake data for another project. To run, clone the repo,
+This is a small and silly project to generate some realistic but fake binary classification predictions and labels for use in [metrics](https://github.com/cjwallace/metrics). It's unlikely you will have any use for this, but if you do, clone the repo, then run
 
 ```bash
-`cd fake_classification_data`
-`poetry install`
-`poetry run generate`
+cd fake-classification-data
+poetry install
+poetry run generate
 ```
 
-An JSON file will be created in `/data` with some prediction probabilities and labels.
+A `predictions.json` file will be created in `/data` with some prediction probabilities and labels. It'll be structured appropriately for consumption by the metrics JSON upload:
+
+```JSON
+[
+  {
+    "probability": 0.10,
+    "label": 0
+  },
+  {
+    "probability": 0.46,
+    "label": 1
+  },
+  ...
+]
+```
+
+✌️
